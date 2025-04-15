@@ -1,0 +1,136 @@
+{% extends 'base_bootstrap.html' %}
+
+{% block head %}
+<title>相性診断</title>
+{% endblock %}
+
+{% block body %}
+<div id="navbar-full">
+   <div id="navbar">
+   <!--
+       navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
+       -->
+       <nav class="navbar navbar-ct-blue navbar-transparent navbar-fixed-top" role="navigation">
+         <div class="alert alert-success hidden">
+           <div class="container">
+               <b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+           </div>
+         </div>
+
+         <div class="container">
+           <!-- Brand and toggle get grouped for better mobile display -->
+           <div class="navbar-header">
+             <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button> -->
+             <a class="navbar-brand" href="/">AI占いApp</a>
+           </div>
+
+           <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <!-- <ul class="nav navbar-nav">
+               <li class="active"><a href="#gsdk">Link</a></li>
+               <li class="dropdown">
+                     <a href="#gsdk" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                       <li><a href="#gsdk">Action</a></li>
+                       <li><a href="#gsdk">Another action</a></li>
+                       <li><a href="#gsdk">Something</a></li>
+                       <li><a href="#gsdk">Another action</a></li>
+                       <li><a href="#gsdk">Something</a></li>
+                       <li class="divider"></li>
+                       <li><a href="#gsdk">Separated link</a></li>
+                     </ul>
+               </li>
+               <li>
+                   <a href="javascript:void(0);" data-toggle="search" class="hidden-xs"><i class="fa fa-search"></i></a>
+               </li>
+             </ul> -->
+              <form class="navbar-form navbar-left navbar-search-form" role="search">
+                <div class="form-group">
+                     <input type="text" value="" class="form-control" placeholder="Search...">
+                </div>
+             </form>
+             <!-- <ul class="nav navbar-nav navbar-right">
+                   <li><a href="#gsdk">Register</a></li>
+
+                   <li><button href="#gsdk" class="btn btn-round btn-default">Sign in</button></li>
+              </ul> -->
+           </div><!-- /.navbar-collapse -->
+         </div><!-- /.container-fluid -->
+       </nav>
+       <div class="blurred-container">
+         <div class="motto">
+             <div>相性診断</div>
+             <p></p>
+             <p>あなたと気になるあの人占ってみましょう</p>
+             <!-- <div class="border no-right-border">診</div><div class="border">断</div> -->
+         </div>
+           <div class="img-src" style="background-image: url('static/img/title_p.png')"></div>
+          <!-- <div class="img-src" style="background-image: url('assets/img/cover_4.jpg')"></div> -->
+          <div class='img-src blur' style="background-image: url('static/img/title_p_blur.png')"></div>
+       </div>
+   </div><!--  end navbar -->
+</div> <!-- end menu-dropdown -->
+
+<div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:5px">
+        <h3>相性診断</h3>
+        <div class="row">
+
+            <div class="col-sm-10">
+              <h4>●あなたの生まれた年を西暦で入力してください。</h4>
+              <p>(1974年 → 1974)</p>
+                <form method="POST" enctype="multipart/form-data" action="/partner">
+                <div class="form-group">
+                    <input type="text" name="years">　年
+                </div>
+              <h4>●あなたの生まれた月を入力してください。</h4>
+              <p>(4月 → 4)</p>
+                <div class="form-group">
+                    <input type="text" name="months">　月
+                </div>
+              <h4>●あなたの生まれた日を入力してください。</h4>
+              <p>(2日 → 2)</p>
+                <div class="form-group">
+                    <input type="text" name="days">　日
+                </div>
+                    <hr>
+<!--            <div class="col-sm-6">-->
+              <h4>●相性を知りたい方の生まれた年を西暦で入力してください。</h4>
+              <p>(1975年 → 1975)</p>
+                <div class="form-group">
+                    <input type="text" name="p_years">　年
+                </div>
+              <h4>●相性を知りたい方の生まれた月を入力してください。</h4>
+              <p>(7月 → 7)</p>
+                <div class="form-group">
+                    <input type="text" name="p_months">　月
+                </div>
+              <h4>●相性を知りたい方の生まれた日を入力してください。</h4>
+              <p>(9日 → 9)</p>
+               <div class="form-group">
+                <input type="text" name="p_days">　日
+               </div>
+
+
+                <input type="submit" value="相性診断" class="btn btn-primary btn-lg" style="width:50%">
+                    <hr>
+                    <button class="btn btn-primary btn-lg" style="width:50%">
+                        <a href='/'>戻る</a>
+                    </button>
+
+
+        </form>
+    </div>
+
+</div>
+
+        <div class="space"></div>
+<!-- end container -->
+</div>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'base_bootstrap.html' %}
+
+{% block head %}
+<title>相性診断</title>
+{% endblock %}
+
+{% block body %}
+<div id="navbar-full">
+   <div id="navbar">
+   <!--
+       navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
+       -->
+       <nav class="navbar navbar-ct-blue navbar-transparent navbar-fixed-top" role="navigation">
+         <div class="alert alert-success hidden">
+           <div class="container">
+<!--               <b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.-->
+           </div>
+         </div>
+
+         <div class="container">
+           <!-- Brand and toggle get grouped for better mobile display -->
+           <div class="navbar-header">
+             <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button> -->
+             <a class="navbar-brand" href="/">AI占いApp</a>
+           </div>
+
+           <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <!-- <ul class="nav navbar-nav">
+               <li class="active"><a href="#gsdk">Link</a></li>
+               <li class="dropdown">
+                     <a href="#gsdk" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                       <li><a href="#gsdk">Action</a></li>
+                       <li><a href="#gsdk">Another action</a></li>
+                       <li><a href="#gsdk">Something</a></li>
+                       <li><a href="#gsdk">Another action</a></li>
+                       <li><a href="#gsdk">Something</a></li>
+                       <li class="divider"></li>
+                       <li><a href="#gsdk">Separated link</a></li>
+                     </ul>
+               </li>
+               <li>
+                   <a href="javascript:void(0);" data-toggle="search" class="hidden-xs"><i class="fa fa-search"></i></a>
+               </li>
+             </ul> -->
+              <form class="navbar-form navbar-left navbar-search-form" role="search">
+                <div class="form-group">
+                     <input type="text" value="" class="form-control" placeholder="Search...">
+                </div>
+             </form>
+             <!-- <ul class="nav navbar-nav navbar-right">
+                   <li><a href="#gsdk">Register</a></li>
+
+                   <li><button href="#gsdk" class="btn btn-round btn-default">Sign in</button></li>
+              </ul> -->
+           </div><!-- /.navbar-collapse -->
+         </div><!-- /.container-fluid -->
+       </nav>
+       <div class="blurred-container">
+         <div class="motto">
+             <div>相性診断</div>
+             <p></p>
+             <p>あなたと気になるあの人占ってみましょう</p>
+             <!-- <div class="border no-right-border">診</div><div class="border">断</div> -->
+         </div>
+           <div class="img-src" style="background-image: url('static/img/title_p.png')"></div>
+          <!-- <div class="img-src" style="background-image: url('assets/img/cover_4.jpg')"></div> -->
+          <div class='img-src blur' style="background-image: url('static/img/title_p_blur.png')"></div>
+       </div>
+   </div><!--  end navbar -->
+</div> <!-- end menu-dropdown -->
+<div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:5px;">
+<!--        <div style="background-image: url({{ picture }}.png);background-position:0px,0px;opacity:0.4;"></div>-->
+		<h3 class="title">結果が出ました</h3>
+
+	    <h4>あなたは</h4>
+        <p><img src="{{ picture }}.png" class='img-rounded img-responsive'></p>
+<!--        <div style="position:relative">-->
+<!--	    <p style="position:absolute;top:-10px;left:-10px;"><img src="{{ picture }}.png" alt="" class="img-fluid" style="width:80%;opacity:0.5;"></p>-->
+<!--            </div>-->
+
+	    <h4>相性を知りたい方は</h4>
+        <p><img src="{{ p_picture }}.png" class='img-rounded img-responsive'></p>
+        <h4>相性診断</h4>
+        <h3 class="title">相性度は{{ p_suchi }}%</h3>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="{{ p_suchi }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ p_suchi }}%;">
+            <span class="sr-only">{{ p_suchi }}% Complete</span>
+          </div>
+        </div>
+	    <p>{{ p_kekka }}</p>
+
+
+        <br><br>
+      <button class="btn btn-primary btn-lg" style="width:50%">
+          <a href='/'>戻る</a>
+      </button>
+    </div>
+    <div class="space"></div>
+<!-- end container -->
+</div>
+{% endblock %}
