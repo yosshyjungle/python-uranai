@@ -63,9 +63,9 @@
          </div><!-- /.container-fluid -->
        </nav>
        <div class="blurred-container">
-           <div class="img-src" style="background-image: url({{ picture }}.png)"></div>
-          <!-- <div class="img-src" style="background-image: url('assets/img/cover_4.jpg')"></div> -->
-          <div class='img-src blur' style="background-image: url({{ picture }}_blur.png)"></div>
+        <div class="img-src" style="background-image: url('static/img/title.png')"></div>
+        <!-- <div class="img-src" style="background-image: url('assets/img/cover_4.jpg')"></div> -->
+        <div class='img-src blur' style="background-image: url('static/img/title_blur.png')"></div>
        </div>
    </div><!--  end navbar -->
 </div> <!-- end menu-dropdown -->
@@ -75,7 +75,9 @@
 	<!--    <p>年齢:{{ age }}歳</p>-->
 	    <h3 class="title">あなたは{{ yourType }}タイプです</h3>
 
-<!--	    <p><img src="{{ picture }}" alt="" class="img-fluid"></p>-->
+        <div class="image-container">
+            <img src="{{ picture }}.png" alt="運命タイプ画像">
+        </div>
 
 	    <h4>【あなたの本質】</h4>
 	    <p>{{ kekka }}</p>
