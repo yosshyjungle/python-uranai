@@ -1707,7 +1707,33 @@ def result():
     else:
         pass
 
-
+    if img_path == 'static/img/金の羅針盤':
+        img_path = 'static/img/g_rashinban'
+    elif img_path == 'static/img/金のインディアン':
+        img_path = 'static/img/g_indian'
+    elif img_path == 'static/img/金の鳳凰': 
+        img_path = 'static/img/g_houou'
+    elif img_path == 'static/img/金の時計': 
+        img_path = 'static/img/g_tokei'
+    elif img_path == 'static/img/金のカメレオン':   
+        img_path = 'static/img/g_kamereon'
+    elif img_path == 'static/img/金のイルカ':
+        img_path = 'static/img/g_iruka'
+    elif img_path == 'static/img/銀の羅針盤':
+        img_path = 'static/img/s_rashinban'
+    elif img_path == 'static/img/銀のインディアン':
+        img_path = 'static/img/s_indian'
+    elif img_path == 'static/img/銀の鳳凰': 
+        img_path = 'static/img/s_houou'
+    elif img_path == 'static/img/銀の時計':
+        img_path = 'static/img/s_tokei'
+    elif img_path == 'static/img/銀のカメレオン':
+        img_path = 'static/img/s_kamereon'
+    elif img_path == 'static/img/銀のイルカ':
+        img_path = 'static/img/s_iruka'
+    else:
+        pass
+    
     return render_template('result.html',
                            age=age,
                            yourType=yourType[0:-2],
@@ -1751,32 +1777,32 @@ def partner():
         if meisu[0:2] < '11':
             print(f'あなたは{even_odd}の羅針盤タイプです。')
             yourType = f'{even_odd}の羅針盤{meisu[0:2]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[0:2] < '21':
             print(f'あなたは{even_odd}のインディアンタイプです')
             yourType = f'{even_odd}のインディアン{meisu[0:2]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[0:2] < '31':
             print(f'あなたは{even_odd}の鳳凰タイプです')
             yourType = f'{even_odd}の鳳凰{meisu[0:2]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[0:2] < '41':
             print(f'あなたは{even_odd}の時計タイプです')
             yourType = f'{even_odd}の時計{meisu[0:2]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[0:2] < '51':
             print(f'あなたは{even_odd}のカメレオンタイプです')
             yourType = f'{even_odd}のカメレオン{meisu[0:2]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[0:2] < '61':
             print(f'あなたは{even_odd}のイルカタイプです')
             yourType = f'{even_odd}のイルカ{meisu[0:2]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
         else:
             print('その他')
 
@@ -1786,32 +1812,32 @@ def partner():
         if meisu[2:4] < '11':
             print(f'あなたは{even_odd}の羅針盤タイプです。')
             yourType = f'{even_odd}の羅針盤{meisu[2:4]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[2:4] < '21':
             print(f'あなたは{even_odd}のインディアンタイプです')
             yourType = f'{even_odd}のインディアン{meisu[2:4]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[2:4] < '31':
             print(f'あなたは{even_odd}の鳳凰タイプです')
             yourType = f'{even_odd}の鳳凰{meisu[2:4]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[2:4] < '41':
             print(f'あなたは{even_odd}の時計タイプです')
             yourType = f'{even_odd}の時計{meisu[2:4]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[2:4] < '51':
             print(f'あなたは{even_odd}のカメレオンタイプです')
             yourType = f'{even_odd}のカメレオン{meisu[2:4]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[2:4] < '61':
             print(f'あなたは{even_odd}のイルカタイプです')
             yourType = f'{even_odd}のイルカ{meisu[2:4]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
         else:
             print('その他')
 
@@ -1820,36 +1846,65 @@ def partner():
         if meisu[4:6] < '11':
             print(f'あなたは{even_odd}の羅針盤タイプです。')
             yourType = f'{even_odd}の羅針盤{meisu[4:6]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[4:6] < '21':
             print(f'あなたは{even_odd}のインディアンタイプです')
             yourType = f'{even_odd}のインディアン{meisu[4:6]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[4:6] < '31':
             print(f'あなたは{even_odd}の鳳凰タイプです')
             yourType = f'{even_odd}の鳳凰{meisu[4:6]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[4:6] < '41':
             print(f'あなたは{even_odd}の時計タイプです')
             yourType = f'{even_odd}の時計{meisu[4:6]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[4:6] < '51':
             print(f'あなたは{even_odd}のカメレオンタイプです')
             yourType = f'{even_odd}のカメレオン{meisu[4:6]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
 
         elif meisu[4:6] < '61':
             print(f'あなたは{even_odd}のイルカタイプです')
             yourType = f'{even_odd}のイルカ{meisu[4:6]}'
-            img_path = f'static/images/{yourType[0:-2]}'
+            img_path = f'static/img/{yourType[0:-2]}'
         else:
             print('その他')
     else:
         pass
+    
+    if img_path == 'static/img/金の羅針盤':
+        img_path = 'static/img/g_rashinban'
+    elif img_path == 'static/img/金のインディアン':
+        img_path = 'static/img/g_indian'
+    elif img_path == 'static/img/金の鳳凰': 
+        img_path = 'static/img/g_houou'
+    elif img_path == 'static/img/金の時計': 
+        img_path = 'static/img/g_tokei'
+    elif img_path == 'static/img/金のカメレオン':   
+        img_path = 'static/img/g_kamereon'
+    elif img_path == 'static/img/金のイルカ':
+        img_path = 'static/img/g_iruka'
+    elif img_path == 'static/img/銀の羅針盤':
+        img_path = 'static/img/s_rashinban'
+    elif img_path == 'static/img/銀のインディアン':
+        img_path = 'static/img/s_indian'
+    elif img_path == 'static/img/銀の鳳凰': 
+        img_path = 'static/img/s_houou'
+    elif img_path == 'static/img/銀の時計':
+        img_path = 'static/img/s_tokei'
+    elif img_path == 'static/img/銀のカメレオン':
+        img_path = 'static/img/s_kamereon'
+    elif img_path == 'static/img/銀のイルカ':
+        img_path = 'static/img/s_iruka'
+    else:
+        pass
+    
+
 
     global p_years
     global p_months
@@ -1880,27 +1935,27 @@ def partner():
     if p_age > 60:
         if p_meisu[0:2] < '11':
             p_yourType = f'{p_even_odd}の羅針盤{p_meisu[0:2]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[0:2] < '21':
             p_yourType = f'{p_even_odd}のインディアン{p_meisu[0:2]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[0:2] < '31':
             p_yourType = f'{p_even_odd}の鳳凰{p_meisu[0:2]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[0:2] < '41':
             p_yourType = f'{p_even_odd}の時計{p_meisu[0:2]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[0:2] < '51':
             p_yourType = f'{p_even_odd}のカメレオン{p_meisu[0:2]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[0:2] < '61':
             p_yourType = f'{p_even_odd}のイルカ{p_meisu[0:2]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
         else:
             pass
 
@@ -1908,27 +1963,27 @@ def partner():
     elif p_age > 30:
         if p_meisu[2:4] < '11':
             p_yourType = f'{p_even_odd}の羅針盤{p_meisu[2:4]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[2:4] < '21':
             p_yourType = f'{p_even_odd}のインディアン{p_meisu[2:4]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[2:4] < '31':
             p_yourType = f'{p_even_odd}の鳳凰{p_meisu[2:4]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[2:4] < '41':
             p_yourType = f'{p_even_odd}の時計{p_meisu[2:4]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[2:4] < '51':
             p_yourType = f'{p_even_odd}のカメレオン{p_meisu[2:4]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[2:4] < '61':
             p_yourType = f'{p_even_odd}のイルカ{p_meisu[2:4]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
         else:
             pass
 
@@ -1936,29 +1991,56 @@ def partner():
     elif p_age > 0:
         if p_meisu[4:6] < '11':
             p_yourType = f'{p_even_odd}の羅針盤{p_meisu[4:6]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[4:6] < '21':
             p_yourType = f'{p_even_odd}のインディアン{p_meisu[4:6]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[4:6] < '31':
             p_yourType = f'{p_even_odd}の鳳凰{p_meisu[4:6]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[4:6] < '41':
             p_yourType = f'{p_even_odd}の時計{p_meisu[4:6]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[4:6] < '51':
             p_yourType = f'{p_even_odd}のカメレオン{p_meisu[4:6]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
 
         elif p_meisu[4:6] < '61':
             p_yourType = f'{p_even_odd}のイルカ{p_meisu[4:6]}'
-            p_img_path = f'static/images/{p_yourType[0:-2]}'
+            p_img_path = f'static/img/{p_yourType[0:-2]}'
         else:
             pass
+    else:
+        pass
+    
+    if p_img_path == 'static/img/金の羅針盤':
+        p_img_path = 'static/img/g_rashinban'
+    elif p_img_path == 'static/img/金のインディアン':
+        p_img_path = 'static/img/g_indian'
+    elif p_img_path == 'static/img/金の鳳凰': 
+        p_img_path = 'static/img/g_houou'
+    elif p_img_path == 'static/img/金の時計': 
+        p_img_path = 'static/img/g_tokei'
+    elif p_img_path == 'static/img/金のカメレオン':   
+        p_img_path = 'static/img/g_kamereon'
+    elif p_img_path == 'static/img/金のイルカ':
+        p_img_path = 'static/img/g_iruka'
+    elif p_img_path == 'static/img/銀の羅針盤':
+        p_img_path = 'static/img/s_rashinban'
+    elif p_img_path == 'static/img/銀のインディアン':
+        p_img_path = 'static/img/s_indian'
+    elif p_img_path == 'static/img/銀の鳳凰': 
+        p_img_path = 'static/img/s_houou'
+    elif p_img_path == 'static/img/銀の時計':
+        p_img_path = 'static/img/s_tokei'
+    elif p_img_path == 'static/img/銀のカメレオン':
+        p_img_path = 'static/img/s_kamereon'
+    elif p_img_path == 'static/img/銀のイルカ':
+        p_img_path = 'static/img/s_iruka'
     else:
         pass
 
