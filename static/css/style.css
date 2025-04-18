@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+    /* .conatainer {
+        padding: 10px !important;
+    } */
+    .tim-container {
+        padding: 10px !important;
+    }
+    
+    h3, h4 {
+        font-size: 1.2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .blurred-container {
+        height: 200px;
+    }
+    
+    .btn {
+        width: 100% !important;
+    }
+}
+
+.image-container {
+    margin: 20px 0;
+}
+
+.img-fluid {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
